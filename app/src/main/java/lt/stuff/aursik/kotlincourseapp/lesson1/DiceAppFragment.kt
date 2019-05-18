@@ -1,11 +1,13 @@
 package lt.stuff.aursik.kotlincourseapp.lesson1
 
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import kotlinx.android.synthetic.main.fragment_dice_app.*
 import lt.stuff.aursik.kotlincourseapp.R
 
 class DiceAppFragment : Fragment() {
@@ -20,13 +22,12 @@ class DiceAppFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_dice_app, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(DiceAppViewModel::class.java)
-        // TODO: Use the ViewModel
+        roll_button.setOnClickListener { Toast.makeText(context, "button clicked", Toast.LENGTH_SHORT).show() }
     }
-
 }

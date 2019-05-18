@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_navigation_graph" app:startDestination="@id/mainMenuFragment">
+
+    <fragment android:id="@+id/diceAppFragment" android:name="lt.stuff.aursik.kotlincourseapp.lesson1.DiceAppFragment"
+              android:label="DiceAppFragment"/>
+    <fragment android:id="@+id/mainMenuFragment" android:name="lt.stuff.aursik.kotlincourseapp.MainMenuFragment"
+              android:label="fragment_main_menu" tools:layout="@layout/fragment_main_menu">
+        <action android:id="@+id/navigate_to_dice_app" app:destination="@id/diceAppFragment"
+                app:popUpTo="@+id/mainMenuFragment"/>
+    </fragment>
+</navigation>
