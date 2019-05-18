@@ -1,4 +1,4 @@
-package lt.stuff.aursik.kotlincourseapp.
+package lt.stuff.aursik.kotlincourseapp.lesson1
 
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -8,13 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import lt.stuff.aursik.kotlincourseapp.R
 
-class MainFragment : Fragment() {
+class DiceAppFragment : Fragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = DiceAppFragment()
     }
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: DiceAppViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +25,7 @@ class MainFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(DiceAppViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
