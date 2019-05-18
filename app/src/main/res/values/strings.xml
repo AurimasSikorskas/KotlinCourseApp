@@ -2,4 +2,5 @@
     <string name="app_name">KotlinCourseApp</string>
     <string name="lesson_title_dice_app">Dice App</string>
     <string name="generic_roll_dice">Roll</string>
+    <string name="lesson1_stupid_roll_title">roll them dices...die...dieces .. yes lets go with dieces</string>
 </resources>
